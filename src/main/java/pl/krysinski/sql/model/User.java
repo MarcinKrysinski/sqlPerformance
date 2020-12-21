@@ -7,16 +7,14 @@ import javax.persistence.*;
 public class User {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long IDD;
-    private String id;
+    private Long id;
     private String first_name;
     private String last_name;
     private String email;
     private Gender gender;
     private String ip_address;
 
-    public User(String id, String first_name, String last_name, String email, Gender gender, String ip_address) {
+    public User(Long id, String first_name, String last_name, String email, Gender gender, String ip_address) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -29,19 +27,12 @@ public class User {
 
     }
 
-//    public Long getIDD() {
-//        return IDD;
-//    }
-//
-//    public void setIDD(Long IDD) {
-//        this.IDD= IDD;
-//    }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

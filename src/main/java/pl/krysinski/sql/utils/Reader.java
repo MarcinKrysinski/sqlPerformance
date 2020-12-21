@@ -35,7 +35,7 @@ public class Reader {
         User user = new User();
         for (int i = 0; i < headers.length; i++) {
             if (headers[i].equals("id")) {
-                user.setId(value[i]);
+                user.setId(Long.valueOf(value[i]));
             }
             if (headers[i].equals("first_name")) {
                 user.setFirst_name(value[i]);
